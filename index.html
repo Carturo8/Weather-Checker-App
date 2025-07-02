@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
 
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Main page container -->
+    <div class="container">
+
+        <!-- Header section -->
+        <header class="center-content">
+            <h1>Weather Checker App</h1>
+        </header>
+
+        <!-- Main content section -->
+        <main class="center-content-top">
+            <input type="text" id="city-name" placeholder="Enter the name of the city" autofocus>
+            <button onclick="searchCityWeather()">Search</button>
+        </main>
+
+        <!-- Footer with author information -->
+        <footer class="center-content">
+            &copy; 2025 Carlos Rojas. All rights reserved.
+        </footer>
+    </div>
+
+    <!-- JavaScript logic -->
+    <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
