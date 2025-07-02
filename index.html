@@ -11,28 +11,29 @@
 </head>
 
 <body>
-    <!-- Main page container -->
+    <!-- Page container -->
     <div class="container">
 
-        <!-- Header section -->
+        <!-- App header -->
         <header class="center-content">
             <h1>Weather Checker App</h1>
         </header>
 
-        <!-- Main content section -->
+        <!-- Search input and button -->
         <main class="center-content-top">
-            <input type="text" id="city-name" placeholder="Enter the name of the city" autofocus>
-            <button onclick="searchCityWeather()">Search</button>
+            <label for="cityName" class="visually-hidden">City Name</label>
+            <input type="text" id="cityName" placeholder="Enter a city name" autofocus>
+            <button id="searchBtn">Search</button>
         </main>
 
-        <!-- Footer with author information -->
+        <!-- Footer with author credits -->
         <footer class="center-content">
             &copy; 2025 Carlos Rojas. All rights reserved.
         </footer>
     </div>
 
     <!-- JavaScript logic -->
-    <script src="src/main.js"></script>
+    <script type="module" src="src/main.js"></script>
 </body>
 
 </html>
