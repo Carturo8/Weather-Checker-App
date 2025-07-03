@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script type="module" crossorigin src="./assets/index-Dbn5Bryd.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CtZlBZud.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="app-header">
+            <h1>Weather Checker App</h1>
+        </header>
+
+        <main>
+            <!-- Search form -->
+            <form id="weatherForm" class="form-container" autocomplete="off">
+                <label for="cityName" class="visually-hidden">Enter a city name</label>
+                <input type="text" id="cityName" name="city" placeholder="Enter a city name" required autofocus/>
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+
+            <!-- Dynamic weather results -->
+            <section id="weatherResult" class="weather-result hidden" aria-live="polite">
+                <img id="weatherIcon" alt="Weather icon" />
+                <h2 id="cityTitle"></h2>
+                <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+                <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+                <p><strong>Wind Speed:</strong> <span id="wind"></span> m/s</p>
+                <p><strong>Sunrise:</strong> <span id="sunrise"></span></p>
+                <p><strong>Sunset:</strong> <span id="sunset"></span></p>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            &copy; 2025 Carlos Rojas. All rights reserved.
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
