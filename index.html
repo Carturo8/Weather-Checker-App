@@ -2,37 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-
-    <!-- Link to external CSS stylesheet -->
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/styles.css" />
 </head>
 
 <body>
-    <!-- Page container -->
     <div class="container">
 
-        <!-- App header -->
-        <header class="center-content">
+        <header class="app-header">
             <h1>Weather Checker App</h1>
         </header>
 
-        <!-- Search input and button -->
-        <main class="center-content-top">
-            <label for="cityName" class="visually-hidden">City Name</label>
-            <input type="text" id="cityName" placeholder="Enter a city name" autofocus>
-            <button id="searchBtn">Search</button>
+        <main>
+            <!-- Search form -->
+            <form id="weatherForm" class="form-container" autocomplete="off">
+                <label for="cityName" class="visually-hidden">Enter a city name</label>
+                <input type="text" id="cityName" name="city" placeholder="Enter a city name" required autofocus/>
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+
+            <!-- Dynamic weather results -->
+            <section id="weatherResult" class="weather-result hidden" aria-live="polite">
+                <img id="weatherIcon" alt="Weather icon" />
+                <h2 id="cityTitle"></h2>
+                <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
+                <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+                <p><strong>Wind Speed:</strong> <span id="wind"></span> m/s</p>
+                <p><strong>Sunrise:</strong> <span id="sunrise"></span></p>
+                <p><strong>Sunset:</strong> <span id="sunset"></span></p>
+            </section>
         </main>
 
-        <!-- Footer with author credits -->
-        <footer class="center-content">
+        <footer class="app-footer">
             &copy; 2025 Carlos Rojas. All rights reserved.
         </footer>
+
     </div>
 
-    <!-- JavaScript logic -->
     <script type="module" src="src/main.js"></script>
 </body>
 
