@@ -1,11 +1,13 @@
-/* Reset default spacing and box model inheritance */
+/* ========== RESET AND BASE STYLES ========== */
+
+/* Remove default spacing and set box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
 
-/* Base HTML styles and document setup */
+/* Set base font, background and default styles */
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* 1rem = 10px */
@@ -14,7 +16,9 @@ html {
     color: #333;
 }
 
-/* Main container layout with full height grid */
+/* ========== LAYOUT CONTAINERS ========== */
+
+/* Grid layout for the entire app */
 .container {
     display: grid;
     min-height: 100vh;
@@ -22,24 +26,12 @@ html {
     margin: 0 auto;
 }
 
-/* Utility class for centered content */
-.center-content {
+/* Header layout and alignment */
+.app-header {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-/* Utility class for top-aligned centered content */
-.center-content-top {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    text-align: center;
-}
-
-/* Header section styling */
-header {
     width: 100%;
     padding: 2rem 0;
     font-size: 3rem;
@@ -48,15 +40,42 @@ header {
     background-color: white;
 }
 
-/* Main content area styling */
-main {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-    padding: 4rem 0;
+/* Footer layout and alignment */
+.app-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555;
+    border-top: 2px solid #ccc;
+    background-color: white;
 }
 
-/* Visually hidden but still accessible (for screen readers) */
+/* Main content wrapper */
+main {
+    max-width: 120rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* ========== FORM STYLING ========== */
+
+/* Search form layout */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+/* Hide visually but keep accessible to screen readers */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -73,7 +92,6 @@ main {
 #cityName {
     width: 100%;
     max-width: 40rem;
-    margin-right: 1rem;
     padding: 1rem;
     font-size: 1.5rem;
     border: 2px solid #dee2e6;
@@ -81,14 +99,14 @@ main {
     transition: border-color 0.3s ease;
 }
 
-/* Input focus state */
+/* Highlight input on focus */
 #cityName:focus {
     outline: none;
     border-color: #2ecc71;
     box-shadow: 0 0 0 0.2rem rgba(46, 204, 113, 0.25);
 }
 
-/* Button styling with all states */
+/* Submit button styling */
 button {
     min-width: 15rem;
     padding: 1rem 0;
@@ -112,30 +130,84 @@ button:active {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer section styling */
-footer {
-    width: 100%;
-    padding: 1rem 0;
+/* ========== WEATHER RESULT CARD ========== */
+
+/* Result section card layout */
+.weather-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50rem;
+    margin: 2rem auto;
+    padding: 2rem 0;
     font-size: 1.5rem;
-    font-weight: bold;
-    color: #555;
-    border-top: 2px solid #ccc;
-    background-color: white;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Responsive design for mobile devices */
+/* Hover effect for result card */
+.weather-result:hover {
+    border-color: #2ecc71;
+    transform: scale(1.10);
+}
+
+.weather-result h2 {
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.weather-result p {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+/* Hide section by default */
+.hidden {
+    display: none;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
 @media (max-width: 768px) {
-    header h1 {
+    .app-header h1 {
         font-size: 2.5rem;
     }
 
-    #city-name {
+    #cityName {
         font-size: 1.4rem;
-        padding: 1rem;
     }
 
     button {
         min-width: 12rem;
         font-size: 1.4rem;
     }
+
+    .weather-result {
+        width: 90%;
+    }
+}
+
+/* ========== ANIMATION: Fade in updated results ========== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.weather-result.updated {
+    animation: fadeIn 0.3s ease;
 }
