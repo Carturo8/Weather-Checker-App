@@ -1,5 +1,7 @@
 # 🌤️ Weather Checker App
 
+🔗 **[Try it here!](https://carturo8.github.io/Weather-Checker-App/)**
+
 A simple, responsive weather web application built with **HTML**, **CSS**, and **JavaScript**, using **OpenWeather API** to retrieve real-time weather data. Styled alerts are integrated via **SweetAlert2** and HTTP requests are handled with **Axios**.
 
 ## 🖼️ Preview
