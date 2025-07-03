@@ -60,7 +60,7 @@ main {
     max-width: 120rem;
     width: 80%;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 /* ========== FORM STYLING ========== */
@@ -72,7 +72,8 @@ main {
     align-items: start;
     gap: 1rem;
     flex-wrap: wrap;
-    padding: 2rem 0;
+    margin: 2rem auto;
+    padding: 4rem 0;
 }
 
 /* Hide visually but keep accessible to screen readers */
@@ -139,8 +140,8 @@ button:active {
     justify-content: center;
     align-items: center;
     max-width: 50rem;
-    margin: 2rem auto;
-    padding: 2rem 0;
+    margin: 4rem auto;
+    padding: 4rem 0;
     font-size: 1.5rem;
     background-color: #fff;
     border: 2px solid #ccc;
