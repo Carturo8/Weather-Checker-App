@@ -65,7 +65,7 @@ weather-checker-app/
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/tu-usuario/weather-checker-app.git
+   git clone https://github.com/Carturo8/Weather-Checker-App.git
    cd weather-checker-app
    ```
 
