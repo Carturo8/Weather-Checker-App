@@ -6,7 +6,7 @@ A simple, responsive weather web application built with **HTML**, **CSS**, and *
 
 ## 🖼️ Preview
 
-![Screenshot of Weather App](assets/img/preview.png)
+![Screenshot of Weather App](frontend/assets/img/preview.png)
 
 ## 🚀 Features
 
