@@ -2,9 +2,6 @@
 import axios from "axios";
 import Swal from 'sweetalert2';
 
-// API key from environment variables (secured via Vite)
-const apiKey = import.meta.env.VITE_API_KEY;
-
 // DOM element references
 const form = document.getElementById("weatherForm");
 const input = document.getElementById("cityName");
@@ -23,7 +20,7 @@ const weatherIcon = document.getElementById("weatherIcon");
  */
 async function fetchWeather(city) {
     try {
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+        const url = `https://weather-backend-702a.onrender.com/weather?city=${encodeURIComponent(city)}`;
         const response = await axios.get(url);
         const data = response.data;
 
