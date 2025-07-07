@@ -45,6 +45,14 @@ app.get('/weather', async (req, res) => {
     }
 });
 
+/**
+ * GET /
+ * Simple route to confirm backend is running
+ */
+app.get('/', (req, res) => {
+    res.send('Weather Checker Backend is running');
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
